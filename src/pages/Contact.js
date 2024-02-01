@@ -108,7 +108,7 @@ const Contact = () => {
         </div>
         <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission"></input>
       </div>
-      <div className={`staggered-text-item ${animated ? 'animate-p' : ''}`}>
+      <div className={`submit staggered-text-item ${animated ? 'animate-p' : ''}`}>
         <input type="submit" value="Submit"></input>
         {Object.keys(formErrors).map((errorField) => (
         <div key={errorField} className="error-message">
