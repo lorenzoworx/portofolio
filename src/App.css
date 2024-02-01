@@ -21,7 +21,7 @@
 .layout-wrapper {
   gap: 20px;
   background: none;
-  height: 100%;
+  height: 80vh;
   width: 100%;
   overflow: hidden;
 }
@@ -55,7 +55,7 @@ header {
 
 .content-wrapper  {
   width: 100%;
-  height: inherit;
+  height: calc(80vh - 176px);
   display: flex;
   flex-direction: column;
   align-items: center;

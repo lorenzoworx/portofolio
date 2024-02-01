@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 20px;
+  max-height: calc(80vh - 176px);
 }
 
 .staggered-text-item {
@@ -30,9 +31,10 @@
 
 .about-bio {
   width: 50%;
-  max-height: 480px;
+  max-height: calc(80vh - 176px);
   overflow-y: hidden;
   margin-right: 10px;
+  padding-bottom: 10px;
 }
 
 .about-bio:hover {

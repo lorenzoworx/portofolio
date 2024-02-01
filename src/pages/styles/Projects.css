@@ -3,10 +3,8 @@
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
-  max-height: 480px;
-}
-
-.project-container:hover {
+  max-height: calc(80vh - 176px);
+  padding-right: 15px;
   overflow-y: auto;
 }
 
