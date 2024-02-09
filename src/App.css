@@ -72,10 +72,7 @@ header {
   background-color: rgba(8, 34, 57, 0.5);
   border: 1px solid #66789D;
   border-radius: 10px;
-  position: fixed;
-  bottom: 20px;
-  left: 10vw;
-  right: 10vw;
+  width: 80vw;
 }
 
 #mobile-menu nav ul {
@@ -118,6 +115,12 @@ header {
   .home-outlet .intro-btn button {
     width: 80%;
   }
+
+  .layout-wrapper {
+    gap: 5vh;
+  }
+
+  
   
 }
 

@@ -14,7 +14,7 @@ const MyLayout = () => {
   const location = useLocation();
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth <= 769 );
+    setIsMobile(window.innerWidth <= 769);
   };
 
   useEffect(() => {

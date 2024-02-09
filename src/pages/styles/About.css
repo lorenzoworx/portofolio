@@ -54,9 +54,12 @@
   .about-outlet {
     flex-direction: column-reverse;
     align-items: center;
+    justify-content: flex-end;
+    gap: 5vh;
   }
   .about-bio {
     width: auto;
+    max-height: 25vh;
     overflow-y: auto;
   }
 
@@ -67,7 +70,8 @@
   .myImg {
     border-radius: 20%;
     border: 1px solid #66789D;
-    ;
+    height: 100%;
+    width: auto;
   }
 
   .about-bio::-webkit-scrollbar-thumb {

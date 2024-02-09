@@ -158,4 +158,13 @@
   label {
     font-size: 0.65rem !important;
   }
+
+  .contact-grid {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .submit {
+    margin-top: 0px;
+  }
 }
