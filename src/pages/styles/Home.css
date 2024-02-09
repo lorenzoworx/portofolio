@@ -18,7 +18,7 @@
 }
 
 .intro-btn {
-  align-self: flex-start;
+  align-self: center;
 }
 
 .intro-btn button {
@@ -28,32 +28,31 @@
   border-radius: 10px;
   border: 1px solid #66789D;
   font-size: 1.2rem;
+  padding: 10px 5px;
 }
 
-.staggered-text-container {
+.home-outlet {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
-.staggered-text-item {
-  opacity: 0;
-  transform: translateY(1em);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+
+.anticon-close {
+  display: none;
 }
 
-.animate-h1 {
-  transition-delay: 0.5s; /* Delay for h1 */
-}
+@media screen and (max-width: 768px) {
+  .intro-bio {
+    align-self: center;
+  }
 
-.animate-p {
-  transition-delay: 1s; /* Delay for p */
-}
+  .intro-header {
+    align-self: center;
+    padding-left: 20px;
+  }
 
-.animate-button {
-  transition-delay: 1.5s; /* Delay for button */
-}
-
-.staggered-text-container.animate .staggered-text-item {
-  opacity: 1;
-  transform: translateY(0);
+  .intro-btn button {
+    width: 100%;
+  }
 }

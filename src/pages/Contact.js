@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import * as FaIcons from 'react-icons/fa'
 import './styles/Contact.css'
 
 const Contact = () => {
-  const [animated, setAnimated] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,19 +11,11 @@ const Contact = () => {
     website: '',
     message: '',
   })
+
   const [formErrors, setFormErrors] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setAnimated(true);
-    }, 500);
-
-    return() => {
-      clearTimeout(timeoutId);
-    };
-  }, []);
-
+ 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -84,8 +75,8 @@ const Contact = () => {
 
   return(
     <>
-    <form className={`contact-form staggered-text-container ${animated ? 'animate' : ''}`} id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mayrewyk" method="post" onSubmit={handleSubmit}>
-      <div id="fs-frm-inputs" className={`contact-grid staggered-text-item ${animated ? 'animate-h1' : ''}`}>
+    <form className='contact-form' id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mayrewyk" method="post" onSubmit={handleSubmit}>
+      <div id="fs-frm-inputs" className='contact-grid'>
         <div>
           <label for="full-name">Full Name</label>
           <input className="input-field" type="text" name="name" id="full-name" placeholder="Surname Firstname Others" required="" onChange={handleChange} value={formData.name}></input>
@@ -108,7 +99,7 @@ const Contact = () => {
         </div>
         <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission"></input>
       </div>
-      <div className={`submit staggered-text-item ${animated ? 'animate-p' : ''}`}>
+      <div className='submit'>
         <input type="submit" value="Submit"></input>
         {Object.keys(formErrors).map((errorField) => (
         <div key={errorField} className="error-message">
@@ -119,7 +110,7 @@ const Contact = () => {
       {formSubmitted && <div className="success-message">Form submitted successfully!</div>}
 
       </div>
-      <div className={`contact-links staggered-text-item ${animated ? 'animate-p' : ''}`}>
+      <div className='contact-links'>
         <Link to='https://github.com/lorenzoworx'>
           <FaIcons.FaGithubSquare className='contact-icon' />        
         </Link>

@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom';
 import { Menu } from 'antd';
 import { navData } from '../lib/NavData';
 
-const Sidebar = () => {
+const Sidebar = ({isMobile}) => {
   return(
     <nav>
       <div className="demo-logo-vertical" />
-        <Menu style={{
+        <Menu id="nav-ul" style={{
           "background-color": "rgba(8, 34, 57, 0)",
         }}
           mode="inline"
@@ -16,7 +16,11 @@ const Sidebar = () => {
           {navData.map((item) => {
             return (
               <Menu.Item key={item.id} icon={item.icon}>
-                <NavLink to={item.link}>{item.label}</NavLink>
+                {isMobile ? 
+                  (<NavLink to={item.link}>''</NavLink>)
+                  :
+                  (<NavLink to={item.link}>{item.label}</NavLink>)
+              }                
               </Menu.Item>
             )
           })}
