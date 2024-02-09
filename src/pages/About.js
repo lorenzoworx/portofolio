@@ -1,23 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './styles/About.css'
 import myImg from './IMG_3234.JPG'
 
 const About = () => {
-  const [animated, setAnimated] = useState(false);
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setAnimated(true);
-    }, 500);
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, []);
+ 
 
   return (
-    <div className={`staggered-text-container ${animated ? 'animate' : ''}`}>
-      <div className={`about-bio staggered-text-item ${animated ? 'animate-h1' : ''}`}>
+    <div className="about-outlet">
+      <div className="about-bio">
         <div>
           <h1>Educcation</h1>
           <p>
@@ -89,12 +79,9 @@ const About = () => {
           </p>
         </div> 
       </div>
-      <div className={`about-picture staggered-text-item ${animated ? 'animate-p' : ''}`}>
+      <div className="about-picture">
         <img src={myImg} alt="" className='myImg' />
-      </div>
-      {/* <div className={`staggered-text-item ${animated ? 'animate-button' : ''}`}>
-        <button>Download cv</button>
-      </div> */}
+      </div>      
     </div>
   );
 };

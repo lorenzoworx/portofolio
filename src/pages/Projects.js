@@ -1,44 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles/Projects.css';
 import { projectData } from '../lib/ProjectData';
+import ReadMore from '../components/ReadMore';
 
 const Projects = () => {
-
-  const [animated, setAnimated] = useState(false);
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setAnimated(true);
-    }, 500);
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, []);
-
   return(
-    <div className={`staggered-text-container ${animated ? 'animate' : ''}`}>
+    <div className={`project-outlet`}>
       <div className="project-container">
         {projectData.map((project) => {
           return(
-            <div className={`project-card staggered-text-item ${animated ? 'animate-h1' : ''}`} key={project.id}>
+            <div className={`project-card`} key={project.id}>
               <div>
                 <img src={project.image} alt="" />
               </div>
-              <div>
+              <div className='project-description'>
                 <h1>
                   {project.title}
                 </h1>
-                <p>
-                  {project.description}
-                </p>
+                <ReadMore
+                  text={project.description}
+                  maxLength={50}
+                 />                  
               </div>
               <div>
-                <Link to={project.liveLink}>Live Demo</Link>
+                <Link className='live-demo-link' to={project.liveLink}>Live Demo</Link>
                 <Link to={project.githubLink}>View on GitHub</Link>
               </div>
-              <div>More Text</div>
         </div>
           )
         })}

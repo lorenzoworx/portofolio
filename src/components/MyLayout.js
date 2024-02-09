@@ -1,12 +1,37 @@
-import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
 import * as Fa6Icons from "react-icons/fa6";
-import { Layout, Button, } from 'antd';
+import { Layout, Button, Menu} from 'antd';
 import Sidebar from './Sidebar';
+
 const { Header, Sider, Content } = Layout;
 
 const MyLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [pageTitle, setPageTitle] = useState("");
+
+  const location = useLocation();
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 769 );
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    const path = location.pathname;
+    const title = path.split("/").pop();
+    setPageTitle(title);
+  }, [location.pathname]);
+
+  const toggleCollapsed = () => {
+    setCollapsed(!collapsed);
+  };
 
   return (
     <main className="project-wrapper">
@@ -31,16 +56,19 @@ const MyLayout = () => {
                 "border-radius": "20px",
               }}
             >
-              <Button
+              <h1 id='page-title'>{pageTitle}</h1>
+              { isMobile ? '' :              
+              (<Button
                 type="text"
                 icon={collapsed ? <Fa6Icons.FaToggleOn /> : <Fa6Icons.FaToggleOff />}
-                onClick={() => setCollapsed(!collapsed)}
+                onClick={() => toggleCollapsed()}
                 style={{
                   fontSize: '16px',
                   width: "80px",
                   height: "80px",
                 }}
-              />
+              />)
+              }
             </Header>
             <Content
               style={{
@@ -55,19 +83,36 @@ const MyLayout = () => {
               </section>
             </Content>
           </Layout>
-          <Sider className="sidebar-container" trigger={null} collapsible collapsed={collapsed} style={
-            {
-              "background-color": "rgba(8, 34, 57, 0.9)",
-              "border-radius": "20px",
-              "border": "1px solid #66789d",
-            }
-          }>
-            <Sidebar />
+          {isMobile ? (
+          <Menu
+            isMobile={true}
+            id="mobile-menu"
+            mode="horizontal"
+            defaultSelectedKeys={['1']}
+            style={{ lineHeight: '64px', marginLeft: 'auto' }}
+          >
+            <Sidebar isMobile={true} />
+          </Menu>
+        ) : (
+          <Sider
+            id="side-nav"
+            className="sidebar-container"
+            trigger={null}
+            collapsible
+            collapsed={collapsed}
+            style={{
+              backgroundColor: "rgba(8, 34, 57, 0.9)",
+              borderRadius: "20px",
+              border: "1px solid #66789d",
+            }}
+          >
+            <Sidebar isMobile={false} />
           </Sider>
+        )}
       </Layout>
     </main>
   );
-
+  
 
 };
 

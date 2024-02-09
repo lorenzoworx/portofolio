@@ -31,7 +31,7 @@
   border-radius: 10px ;
 }
 
-nav {
+#side-nav .ant-layout-sider-children nav {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -50,7 +50,9 @@ nav {
 
 header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-left: 5vw !important;
 }
 
 .content-wrapper  {
@@ -60,3 +62,62 @@ header {
   flex-direction: column;
   align-items: center;
 }
+
+#nav-ul {
+  width: 100%;
+}
+
+#mobile-menu {
+  padding: 0;
+  background-color: rgba(8, 34, 57, 0.5);
+  border: 1px solid #66789D;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 20px;
+  left: 10vw;
+  right: 10vw;
+}
+
+#mobile-menu nav ul {
+  display: flex;
+  width: 80vw;
+  justify-content: space-around;
+}
+
+#mobile-menu nav ul li {
+  width: 20%;
+  justify-content: center;
+}
+
+#mobile-menu nav ul li svg {
+  width: 100%;
+}
+
+#page-title {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .home-outlet {
+    align-items: center;
+    justify-items: center;
+  }
+
+  .home-outlet > div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .home-outlet .intro-btn {
+    width: 100%;
+  }
+
+  .home-outlet .intro-btn button {
+    width: 80%;
+  }
+  
+}
+
