@@ -55,4 +55,18 @@
   .intro-btn button {
     width: 100%;
   }
+
+  .home-outlet {
+    overflow-y: auto;
+    max-height: 50vh;
+  }
+
+  .content-wrapper {
+    height: 40vh;
+  }
+
+  .home-outlet::-webkit-scrollbar {
+    width: 0; 
+    background: transparent;
+  }
 }
