@@ -13,7 +13,7 @@ export const projectData = [
      empowers you to explore, connect, and thrive in the world of online commerce.`,
     liveLink: "https://arogah.onrender.com/",
     githubLink: "https://github.com/lorenzoworx/ecommerce-frontend",
-    image: "public/images/arogah.png",
+    image: "/images/arogah.png",
   },
   {
     id: "2",
@@ -23,7 +23,7 @@ export const projectData = [
     books from that list.`,
     liveLink: "https://lorenzoworx.github.io/awesomeBooksEs6/",
     githubLink: "https://github.com/lorenzoworx/awesomeBooksEs6",
-    image: "public/images/awesomebooks.png",
+    image: "/images/awesomebooks.png",
   },
   {
     id: "3",
@@ -33,7 +33,7 @@ export const projectData = [
     organizing, and tracking books and borrowers in a library setting.`,
     liveLink: null,
     githubLink: "https://github.com/lorenzoworx/bookWarden",
-    image: "public/images/bookwarden.png",
+    image: "/images/bookwarden.png",
   },
   {
     id: "4",
@@ -45,7 +45,7 @@ export const projectData = [
     the app should allow you to make them public so anyone can access them.`,
     liveLink: null,
     githubLink: "https://github.com/lorenzoworx/chef-chapters",
-    image: "public/images/chefchapters.png",
+    image: "/images/chefchapters.png",
   },
   {
     id: "5",
@@ -54,7 +54,7 @@ export const projectData = [
     description: `Crypto Insight is a cutting-edge web application designed to provide users with up-to-date information on various cryptocurrencies. Powered by Crypto Gecko, Crypto Insight allows users to stay informed about the latest data and trends in the world of digital currencies.`,
     liveLink: "https://crypto-insight.onrender.com/",
     githubLink: "https://github.com/lorenzoworx/crypto-insight",
-    image: "public/images/cryptoinsight.png",
+    image: "/images/cryptoinsight.png",
   },
   {
     id: "6",
@@ -63,7 +63,7 @@ export const projectData = [
     description: `E-nventorium, your digital haven for curating, organizing, and discovering your world of digital assets. Unleash the power of streamlined asset management with E-nventorium, where innovation meets organization. Whether you're a creative professional, a collector of digital treasures, or simply someone who appreciates order amidst the digital chaos, E-nventorium offers you a sophisticated platform to catalog, categorize, and access your digital assets with ease.`,
     liveLink: null,
     githubLink: "https://github.com/lorenzoworx/E-nventorium",
-    image: "public/images/e-nventorium.png",
+    image: "/images/e-nventorium.png",
   },
   {
     id: "7",
@@ -72,7 +72,7 @@ export const projectData = [
     description: `Frugal Funds is a budget management web application designed to help users track their expenses and manage their finances efficiently.`,
     liveLink: null,
     githubLink: "https://github.com/lorenzoworx/frugalFunds/tree/feature/implement-budget-app",
-    image: "public/images/frugalfunds.png",
+    image: "/images/frugalfunds.png",
   },
   {
     id: "8",
@@ -81,7 +81,7 @@ export const projectData = [
     description: `math-magicians is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to Make simple calculations and read a random math-related quote`,
     liveLink: null,
     githubLink: "https://github.com/lorenzoworx/math-magicians",
-    image: "public/images/mathmagicians.png",
+    image: "/images/mathmagicians.png",
   },
   {
     id: "9",
@@ -90,7 +90,7 @@ export const projectData = [
     description: `Space Travelers' Hub is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.`,
     liveLink: "https://spacetravelers-bfrl.onrender.com/",
     githubLink: "https://github.com/lorenzoworx/reactSpaceTravelers",
-    image: "public/images/spacetravelers.png",
+    image: "/images/spacetravelers.png",
   },
   {
     id: "10",
@@ -99,7 +99,7 @@ export const projectData = [
     description: `Welcome to Velvet Scribe, a timeless realm of words and thoughts, where the art of expression finds its place. Velvet Scribe is more than just a blog website; it's a canvas where ideas, stories, and perspectives come to life.`,
     liveLink: null,
     githubLink: "https://github.com/lorenzoworx/velvetScribe",
-    image: "public/images/velvetscribe.png",
+    image: "/images/velvetscribe.png",
   },
   
   

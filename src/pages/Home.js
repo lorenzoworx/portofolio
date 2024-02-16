@@ -27,7 +27,7 @@ const Home = () => {
         </p>
       </div>
       <div className="intro-btn">
-      <DownloadButton fileName="oshokeResume.pdf" filePath='public/resume/Okolo-Oshokenoya-Resume-uptodate.pdf' buttonLabel='Download CV' />
+      <DownloadButton fileName="oshokeResume.pdf" filePath='/resume/Okolo-Oshokenoya-Resume-uptodate.pdf' buttonLabel='Download CV' />
       </div>
     </div>
   )
