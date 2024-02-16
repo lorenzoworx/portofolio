@@ -23,8 +23,11 @@ const Projects = () => {
                   maxLength={50}
                  />                  
               </div>
-              <div>
-                <Link className='live-demo-link' to={project.liveLink}>Live Demo</Link>
+              <div className='project-links'>
+                {project.liveLinkAvailable ?
+                (<Link className='live-demo-link' to={project.liveLink}>Live Demo</Link>)
+                : '' }
+                
                 <Link to={project.githubLink}>View on GitHub</Link>
               </div>
         </div>

@@ -1,9 +1,16 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { Menu } from 'antd';
 import { navData } from '../lib/NavData';
 
 const Sidebar = ({isMobile}) => {
+  const location = useLocation();
+  const currentPath = location.pathname;
+
+  const getSelectedKey = () => {
+    const selectedItem = navData.find(item => item.link === currentPath);
+    return selectedItem ? [selectedItem.id.toString()] : ['1'];
+  }
   return(
     <nav>
       <div className="demo-logo-vertical" />
@@ -11,7 +18,7 @@ const Sidebar = ({isMobile}) => {
           "background-color": "rgba(8, 34, 57, 0)",
         }}
           mode="inline"
-          defaultSelectedKeys={['1']}
+          defaultSelectedKeys={getSelectedKey()}
         >
           {navData.map((item) => {
             return (

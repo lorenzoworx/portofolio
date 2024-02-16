@@ -12,6 +12,32 @@
   overflow-y: hidden;
   margin-right: 10px;
   padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.about-bio ul {
+  list-style: none;
+}
+
+.about-bio > div {
+  border: 1px solid #66789D;
+  border-radius: 10px;
+  padding: 2vh 2vw;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vw;
+}
+
+.skills > li {
+  border: 1px solid #66789D;
+  border-radius: 5px;
+  padding: 2vh 1vw;
+  background-color: #e65a7c;
 }
 
 .about-bio:hover {
